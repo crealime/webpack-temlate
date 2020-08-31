@@ -1,6 +1,172 @@
 @import reset
-@import fonts
 @import vars
+@import mixins
+
+// Fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;600;700;800;900&display=swap')
+
+// Standart
+
+*::-webkit-input-placeholder
+	color: $gray-1
+	font-weight: 300
+	font-family: $font-1
+
+*:-moz-placeholder
+	color: $gray-1
+	font-weight: 300
+	font-family: $font-1
+
+*::-moz-placeholder
+	color: $gray-1
+	font-weight: 300
+	font-family: $font-1
+
+*:-ms-input-placeholder
+	color: $gray-1
+	font-weight: 300
+	font-family: $font-1
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance: none
+
+input[type='number']
+	-moz-appearance: textfield
+
+*
+	box-sizing: border-box
+	user-select: none
+
+a:active, a:focus
+	outline: none
+
+input, textarea
+	outline: none
+	border-radius: 0
+	font-family: $font-1 !important
+
+input:active, textarea:active
+	outline: none
+input:focus, textarea:focus
+	outline: none
+textarea
+	resize: none
+textarea
+	resize: vertical
+textarea
+	resize: horizontal
+
+html, body
+	width: 100%
+	height: 100%
+
+html
+	font-size: 16px
+
 
 body
+	position: relative
+	overflow-x: hidden
+	height: 100%
 	font-family: $font-1
+	font-size: rem(16)
+	font-weight: 300
+	line-height: 1.5
+	background: $gray-1
+
+h1
+	font-size: 24px
+	font-weight: 800
+	text-transform: uppercase
+	text-align: center
+	color: $white-1
+	padding: 24px 0
+
+h3
+	font-size: 18px
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	color: $white-1
+	padding: 18px 0
+
+// Content
+
+.wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+	min-height: 100vh
+
+.content
+	flex: 1 0 auto
+
+.footer
+	flex: 0 0 auto
+
+.container
+
+
+button, .button
+	cursor: pointer
+	display: block
+	width: 100%
+	background: $orange-1
+	color: $white-1
+	padding: 16px
+	font-size: 16px
+	font-weight: 700
+	text-align: center
+	border: none
+	text-transform: uppercase
+	transition-duration: .3s
+
+	&:hover
+		background: $orange-2
+		color: $white-1
+
+a
+	outline: none
+	text-decoration: none
+	transition-duration: .3s
+	margin: 0
+	padding: 0
+	color: $orange-1
+
+	&:hover, &:focus
+		text-decoration: none
+		color: $orange-2
+	
+@keyframes red
+	0%
+		fill: $orange-1
+	50%
+		fill: $red-1
+	100%
+		fill: $orange-1
+
+@keyframes green
+	0%
+		fill: $orange-1
+	50%
+		fill: $green-1
+	100%
+		fill: $orange-1
+
+// Header
+
+
+	
+
+
+
+
+		

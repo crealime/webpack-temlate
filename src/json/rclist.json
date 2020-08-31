@@ -1,0 +1,35 @@
+[
+	{
+		"img": "assets/img/pictures/grani.jpg",
+		"title": "Грани",
+		"address": "Украина, г. Днепр, бульвар Звёздный, 1",
+		"params": {
+			"amountName": "Квартир в продаже",
+			"amount": 126,
+			"costName": "Стоимость",
+			"cost": "от 19100 грн/м²"
+		}
+	},
+	{
+		"img": "assets/img/pictures/continent.jpg",
+		"title": "Пятый Континент",
+		"address": "Украина, г. Днепр, пр. Героев, 1А на ж/м Победа",
+		"params" : {
+			"amountName": "Квартир в продаже",
+			"amount": 108,
+			"costName": "Стоимость",
+			"cost": "от 19500 грн/м²"
+		}
+	},
+	{
+		"img": "assets/img/pictures/panorama.jpg",
+		"title": "Панорама",
+		"address": "Украина, г. Днепр, ул. Симферопольская, 2К",
+		"params" : {
+			"amountName": "Квартир в продаже",
+			"amount": 206,
+			"costName": "Стоимость",
+			"cost": "от 19450 грн/м²"
+		}
+	}
+]

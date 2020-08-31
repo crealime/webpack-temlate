@@ -1,18 +1,25 @@
 <template lang="pug">
-	section.section
+	#app
 		.wrapper
-			.container
-				h1 VUE
-
+			Header
+			.content
+				router-view
+			Footer
 </template>
 
 <script>
+import Header from '~/components/Header'
+import Footer from '~/components/Footer'
+
 export default {
-	name: "App"
+	name: 'App',
+	components: {
+		Header,
+		Footer
+	}
 }
 </script>
 
-<style scoped lang="sass">
-h1
-	color: red
+<style lang="sass">
+
 </style>

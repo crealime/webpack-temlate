@@ -16,8 +16,8 @@ module.exports = {
 		paths: PATHS
 	},
 	entry: {
-		app: PATHS.src,
-		admin: `${PATHS.src}/admin.js`
+		app: `${PATHS.src}/index.js`,
+		// admin: `${PATHS.src}/admin.js`
 	},
 	output: {
 		filename: `${PATHS.assets}/js/[name].[hash].js`,
@@ -48,7 +48,7 @@ module.exports = {
 				loader: 'vue-loader',
 				options: {
 					loader: {
-						sass: 'vue-style-loader!css-loader!sass-loader'
+						sass: 'vue-style-loader!css-loader!sass-loader',
 					}
 				}
 			},
@@ -64,14 +64,20 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.(png|jpg|gif)$/,
+				test: /\.(png|jpg|gif|svg)$/,
 				loader: 'file-loader',
 				options: {
-					name: '[name].[ext]'
+					limit: false,
+					name: '[name].[ext]',
+					esModule: false
 				}
 			},
 			{
-				test: /\.(sa|sc|c)ss$/,
+				test: /\.css$/,
+				use:  [  MiniCssExtractPlugin.loader, 'css-loader']
+			},
+			{
+				test: /\.(sa|sc)ss$/,
 				exclude: '/node_modules/',
 				use: [
 					MiniCssExtractPlugin.loader,
@@ -94,8 +100,9 @@ module.exports = {
 					{
 						loader: 'sass-loader',
 						options: {
+							additionalData: `@import "~/assets/sass/_vars.sass"; @import "~/assets/sass/_mixins.sass";`,
 							sassOptions: {
-								indentedSyntax: true
+								indentedSyntax: true,
 							},
 							sourceMap: true
 						}
@@ -106,8 +113,10 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			'~': 'src'
-		}
+			'~': PATHS.src,
+			'@': PATHS.src
+		},
+		extensions: ['*', '.js', '.vue', '.json']
 	},
 	plugins: [
 		new CleanWebpackPlugin({
@@ -125,6 +134,7 @@ module.exports = {
 		new CopyWebpackPlugin({
 			patterns:[
 				{ from: `${PATHS.src}/assets/img`, to: `${PATHS.dist}/assets/img` },
+				{ from: `${PATHS.src}/json`, to: `${PATHS.dist}/assets/json` },
 				{ from: `${PATHS.src}/assets/fonts`, to: `${PATHS.dist}/assets/fonts` },
 				{ from:`${PATHS.src}/static`, to: `${PATHS.dist}` }
 			]

@@ -13,6 +13,17 @@
     "> 1%",
     "Last 3 version"
   ],
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap-vue": "^2.16.0",
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+    "vue-axios": "^2.1.5",
+    "vue-click-outside": "^1.1.0",
+    "vue-router": "^3.4.3",
+    "vue2-scrollbar": "0.0.3",
+    "vuex": "^3.5.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
@@ -33,6 +44,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
     "vue-loader": "^15.9.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
@@ -40,9 +52,5 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.1"
-  },
-  "dependencies": {
-    "vue": "^2.6.11",
-    "vuex": "^3.5.1"
   }
 }
